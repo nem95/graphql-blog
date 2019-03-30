@@ -1,0 +1,34 @@
+ArticleInput:
+  type: input-object
+  config:
+    fields:
+      title:
+        type: "String!"
+      content:
+        type: "String!"
+      category_id:
+        type: "Int!"
+      author_id:
+        type: "Int!"
+
+ArticleUpdateInput:
+  type: input-object
+  config:
+    fields:
+      id:
+        type: "Int!"
+      title:
+        type: "String!"
+      content:
+        type: "String!"
+      category_id:
+        type: "Int!"
+      author_id:
+        type: "Int!"
+
+ArticleDeleteInput:
+  type: input-object
+  config:
+    fields:
+      id:
+        type: "Int!"

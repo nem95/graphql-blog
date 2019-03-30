@@ -1,0 +1,10 @@
+Category:
+  type: object
+  config:
+    fields:
+      id:
+        type: 'Int!'
+      name:
+        type: 'String!'
+      articles:
+        type: '[Article]'

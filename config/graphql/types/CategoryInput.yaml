@@ -1,0 +1,22 @@
+CategoryInput:
+  type: input-object
+  config:
+    fields:
+      name:
+        type: "String!"
+
+CategoryUpdateInput:
+  type: input-object
+  config:
+    fields:
+      id:
+        type: "Int!"
+      name:
+        type: "String!"
+
+CategoryDeleteInput:
+  type: input-object
+  config:
+    fields:
+      id:
+        type: "Int!"

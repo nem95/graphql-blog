@@ -1,0 +1,83 @@
+MutationSuccess:
+  type: object
+  config:
+    fields:
+      content:
+        type: 'String!'
+
+Mutation:
+  type: object
+  config:
+    fields:
+      NewArticle:
+        type: MutationSuccess
+        resolve: "@=mutation('NewArticle', [ args['input']['title'], args['input']['content'], args['input']['category_id'], args['input']['author_id'] ])"
+        args:
+          input:
+            type: ArticleInput!
+      UpdateArticle:
+        type: MutationSuccess
+        resolve: "@=mutation('UpdateArticle', [ args['input']['id'], args['input']['title'], args['input']['content'], args['input']['category_id'], args['input']['author_id'] ])"
+        args:
+          input:
+            type: ArticleUpdateInput!
+      DeleteArticle:
+        type: MutationSuccess
+        resolve: "@=mutation('DeleteArticle', [ args['input']['id'] ])"
+        args:
+          input:
+            type: ArticleDeleteInput!
+      NewAuthor:
+        type: MutationSuccess
+        resolve: "@=mutation('NewAuthor', [ args['input']['name'] ])"
+        args:
+          input:
+            type: AuthorInput!
+      UpdateAuthor:
+        type: MutationSuccess
+        resolve: "@=mutation('UpdateAuthor', [ args['input']['id'], args['input']['name'] ])"
+        args:
+          input:
+            type: AuthorUpdateInput!
+      DeleteAuthor:
+        type: MutationSuccess
+        resolve: "@=mutation('DeleteAuthor', [ args['input']['id'] ])"
+        args:
+          input:
+            type: AuthorDeleteInput!
+      NewCategory:
+        type: MutationSuccess
+        resolve: "@=mutation('NewCategory', [ args['input']['name'] ])"
+        args:
+          input:
+            type: CategoryInput!
+      UpdateCategory:
+        type: MutationSuccess
+        resolve: "@=mutation('UpdateCategory', [ args['input']['id'], args['input']['name'] ])"
+        args:
+          input:
+            type: CategoryUpdateInput!
+      DeleteCategory:
+        type: MutationSuccess
+        resolve: "@=mutation('DeleteCategory', [ args['input']['id'] ])"
+        args:
+          input:
+            type: CategoryDeleteInput!
+      NewComment:
+        type: MutationSuccess
+        resolve: "@=mutation('NewComment', [ args['input']['content'], args['input']['article'] ])"
+        args:
+          input:
+            type: CommentInput!
+      UpdateComment:
+        type: MutationSuccess
+        resolve: "@=mutation('UpdateComment', [ args['input']['id'], args['input']['content'] ])"
+        args:
+          input:
+            type: CommentUpdateInput!
+      DeleteComment:
+        type: MutationSuccess
+        resolve: "@=mutation('DeleteComment', [ args['input']['id'] ])"
+        args:
+          input:
+            type: CommentDeleteInput!

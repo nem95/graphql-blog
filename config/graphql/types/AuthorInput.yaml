@@ -1,0 +1,22 @@
+AuthorInput:
+  type: input-object
+  config:
+    fields:
+      name:
+        type: "String!"
+
+AuthorUpdateInput:
+  type: input-object
+  config:
+    fields:
+      id:
+        type: "Int!"
+      name:
+        type: "String!"
+
+AuthorDeleteInput:
+  type: input-object
+  config:
+    fields:
+      id:
+        type: "Int!"

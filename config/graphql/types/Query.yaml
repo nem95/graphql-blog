@@ -1,0 +1,44 @@
+Query :
+  type: object
+  config:
+    fields:
+      Article:
+        type: 'Article'
+        args:
+          id:
+            description: "Resolve articles using its id"
+            type: 'Int!'
+        resolve: "@=resolver('Article', [args['id']])"
+      Articles:
+        type: '[Article]'
+        resolve: "@=resolver('Articles')"
+      Category:
+        type: 'Category'
+        args:
+          id:
+            description: 'Resolve Category using its id'
+            type: 'Int!'
+        resolve: "@=resolver('Category', [args['id']])"
+      Categories:
+        type: '[Category]'
+        resolve: "@=resolver('Categories')"
+      Author:
+        type: 'Author'
+        args:
+          id:
+            description: 'Resolve Author using its id'
+            type: 'Int!'
+        resolve: "@=resolver('Author', [args['id']])"
+      Authors:
+        type: '[Author]'
+        resolve: "@=resolver('Authors')"
+      Comment:
+        type: 'Comment'
+        args:
+          id:
+            description: 'Resolve Comment using its id'
+            type: 'Int!'
+        resolve: "@=resolver('Comment', [args['id']])"
+      Comments:
+        type: '[Comment]'
+        resolve: "@=resolver('Comments')"

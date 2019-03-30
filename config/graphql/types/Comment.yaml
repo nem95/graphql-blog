@@ -1,0 +1,10 @@
+Comment:
+  type: object
+  config:
+    fields:
+      id:
+        type: 'Int!'
+      content:
+        type: 'String!'
+      article:
+        type: 'Article!'

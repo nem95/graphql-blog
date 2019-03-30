@@ -1,0 +1,24 @@
+CommentInput:
+  type: input-object
+  config:
+    fields:
+      content:
+        type: "String!"
+      article_id:
+        type: "Int!"
+
+CommentUpdateInput:
+  type: input-object
+  config:
+    fields:
+      id:
+        type: "Int!"
+      content:
+        type: "String!"
+
+CommentDeleteInput:
+  type: input-object
+  config:
+    fields:
+      id:
+        type: "Int!"
